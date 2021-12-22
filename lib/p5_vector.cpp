@@ -220,7 +220,7 @@ namespace P5
 
     float PVector::angleBetween(const PVector &_a, const PVector &_b)
     {
-        return P5::acos(_a.dot(_b) / _a.mag() * _b. mag());
+        return P5::acos(P5::constrain(_a.dot(_b) / _a.mag() * _b. mag(),-1.0,1.0));
     }
 
     std::array<float, 3> PVector::array() const
